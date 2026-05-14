@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.metatakip.controllers.HomeActive.HomeRootScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#EEF2F7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ══════════════════════════════════════
+             🔵 HERO HEADER
+             ══════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1976D2"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:id="@+id/tvFormTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📞 YENİ ÇAĞRI KAYDI"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- ══════════════════════════════════════
+             📦 FORM CONTENT
+             ══════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Card 1: Müşteri Bilgileri -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="👤 MÜŞTERİ BİLGİLERİ"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#1976D2"
+                        android:layout_marginBottom="12dp" />
+
+                    <EditText
+                        android:id="@+id/etMusteriTelefonu"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Müşteri Telefonu *"
+                        android:inputType="phone"
+                        android:background="@drawable/edittext_border"
+                        android:paddingHorizontal="12dp"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/etMusteriAdi"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Müşteri Adı"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/edittext_border"
+                        android:paddingHorizontal="12dp"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 2: Aranan Taraf -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🏢 ARANAN TARAF"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#1976D2"
+                        android:layout_marginBottom="12dp" />
+
+                    <EditText
+                        android:id="@+id/etFirmaAdi"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Firma Adı *"
+                        android:background="@drawable/edittext_border"
+                        android:paddingHorizontal="12dp"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/etHatAdi"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Hat / Bölüm *"
+                        android:background="@drawable/edittext_border"
+                        android:paddingHorizontal="12dp"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/etArananTelefon"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Aranan Telefon *"
+                        android:inputType="phone"
+                        android:background="@drawable/edittext_border"
+                        android:paddingHorizontal="12dp"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 3: Cihaz ve Çağrı Türü -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📱 CİHAZ VE ÇAĞRI AYARLARI"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#1976D2"
+                        android:layout_marginBottom="12dp" />
+
+                    <EditText
+                        android:id="@+id/etCihazAdi"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Cihaz Adı *"
+                        android:background="@drawable/edittext_border"
+                        android:paddingHorizontal="12dp"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginBottom="10dp">
+                        <EditText
+                            android:id="@+id/etCihazRolu"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="5dp"
+                            android:hint="Rol (SAHA)"
+                            android:text="SAHA"
+                            android:background="@drawable/edittext_border"
+                            android:paddingHorizontal="12dp"
+                            android:textSize="14sp" />
+                        <EditText
+                            android:id="@+id/etSimYuvasi"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="5dp"
+                            android:hint="SIM (SIM1)"
+                            android:text="SIM1"
+                            android:background="@drawable/edittext_border"
+                            android:paddingHorizontal="12dp"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Çağrı Türü"
+                        android:textSize="11sp"
+                        android:textColor="#64748B"
+                        android:layout_marginBottom="4dp"/>
+
+                    <RadioGroup
+                        android:id="@+id/rgCagriTuru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+                        <RadioButton android:id="@+id/rbGelen" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Gelen" android:checked="true" android:textSize="12sp"/>
+                        <RadioButton android:id="@+id/rbGiden" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Giden" android:textSize="12sp"/>
+                        <RadioButton android:id="@+id/rbCevapsiz" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Cevapsız" android:textSize="12sp"/>
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cihaz Konumu"
+                        android:textSize="11sp"
+                        android:textColor="#64748B"
+                        android:layout_marginBottom="4dp"/>
+
+                    <RadioGroup
+                        android:id="@+id/rgCihazMerkezMi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <RadioButton android:id="@+id/rbSaha" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Saha" android:checked="true" android:textSize="12sp"/>
+                        <RadioButton android:id="@+id/rbMerkez" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Merkez" android:textSize="12sp"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 💾 KAYDET BUTONU -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp">
+
+                    <Button
+                        android:id="@+id/btnKaydet"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="ÇAĞRIYI KAYDET"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:backgroundTint="#43A047"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        app:cornerRadius="10dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 🧪 TEST BUTONU -->
+            <Button
+                android:id="@+id/btnTestDoldur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🧪 Test Verisi Doldur"
+                android:backgroundTint="#ECEFF1"
+                android:textColor="#546E7A"
+                android:layout_marginBottom="32dp"
+                app:cornerRadius="10dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</com.example.metatakip.controllers.HomeActive.HomeRootScrollView>

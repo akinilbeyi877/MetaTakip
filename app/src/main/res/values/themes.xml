@@ -1,0 +1,134 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 🌗 Genel Uygulama Teması (DayNight) -->
+    <style name="Theme.MetaTakip" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <!-- 💡 HomeActivity için sabit beyaz tema -->
+    <style name="Theme.MetaTakip.Light" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Üst bar arka plan -->
+        <item name="colorPrimary">@color/purple_700</item>
+        <!-- Üst bar yazı rengi (META TAKİP beyaz görünür) -->
+        <item name="colorOnPrimary">@android:color/white</item>
+        <!-- Genel arka plan -->
+        <item name="android:windowBackground">@color/white</item>
+        <!-- Varsayılan metin rengi -->
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+
+    <!-- 📞 CallPopupActivity için YÜZEN PENCERE Teması -->
+    <style name="CallPopupTheme" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <!-- Tamamen şeffaf arka plan (Popup penceresi şeffaf) -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+
+        <!-- Dialog arka plan karartmasını kapat -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:backgroundDimAmount">0.0</item>
+
+        <!-- Animasyonları kapat (kendi animasyonumuzu kullanacağız) -->
+        <item name="android:windowAnimationStyle">@style/CallPopupAnimation</item>
+
+        <!-- Kenarlıkları kaldır -->
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+        <!-- Yüzen pencere özellikleri -->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowSoftInputMode">stateVisible|adjustResize</item>
+
+        <!-- Don't show in recent apps -->
+        <item name="android:excludeFromRecents">true</item>
+
+        <!-- Hardware acceleration for smooth dragging -->
+        <item name="android:hardwareAccelerated">true</item>
+
+        <!-- KARE KÖŞELER için: Dialog köşe yuvarlaklığını kaldır -->
+        <item name="dialogCornerRadius">0dp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.CallPopup.Square</item>
+
+        <!-- Material Components için köşe yuvarlaklığı ayarları -->
+        <item name="materialButtonStyle">@style/Widget.MetaTakip.Button.Square</item>
+        <item name="cardViewStyle">@style/Widget.MetaTakip.CardView.Square</item>
+
+        <!-- Renkler -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Pencere gölgesi -->
+        <item name="android:elevation">8dp</item>
+    </style>
+
+    <!-- 📞 CALL POPUP TRANSLUCENT TEMASI (Manifest için) -->
+    <style name="Theme.AppCompat.Translucent.NoTitleBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+    <!-- 🔲 Kare Köşeli Şekil Görünümü -->
+    <style name="ShapeAppearance.CallPopup.Square" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <!-- 🔳 Kare Köşeli Buton Stili -->
+    <style name="Widget.MetaTakip.Button.Square" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">0dp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.CallPopup.Square</item>
+    </style>
+
+    <!-- 🔳 Kare Köşeli CardView Stili -->
+    <style name="Widget.MetaTakip.CardView.Square" parent="CardView">
+        <item name="cardCornerRadius">0dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <!-- 🎭 Call Popup Animasyon Stili -->
+    <style name="CallPopupAnimation" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <!-- 🎨 Material Dialog için tema -->
+    <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="buttonBarPositiveButtonStyle">@style/DialogButtonStyle.Positive</item>
+        <item name="buttonBarNegativeButtonStyle">@style/DialogButtonStyle.Negative</item>
+    </style>
+
+    <!-- ✅ Pozitif buton stili -->
+    <style name="DialogButtonStyle.Positive" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <!-- ❌ Negatif buton stili -->
+    <style name="DialogButtonStyle.Negative" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+</resources>

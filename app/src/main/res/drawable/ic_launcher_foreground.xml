@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 🔵 Mavi daire arka plan -->
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M54,0A54,54 0,1 0,108,54A54,54 0,1 0,54,0Z" />
+
+    <!-- ⚪ Beyaz M harfi -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,75 L45,35 L54,55 L63,35 L73,75 L63,75 L54,55 L45,75 Z" />
+</vector>

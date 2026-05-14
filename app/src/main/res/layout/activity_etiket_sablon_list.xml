@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- BAŞLIK -->
+    <TextView
+        android:text="🏷️ Etiket Şablonları"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- ➕ YENİ ŞABLON -->
+    <Button
+        android:id="@+id/btnYeniSablon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="➕ Yeni Etiket Şablonu"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- ŞABLON LİSTESİ -->
+    <ListView
+        android:id="@+id/listViewSablonlar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:dividerHeight="1dp"/>
+
+</LinearLayout>

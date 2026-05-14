@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Müşteri Adı label -->
+    <TextView
+        android:id="@+id/tvLabelMusteriAdi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Müşteri Adı"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:paddingBottom="4dp" />
+
+    <!-- Müşteri Adı input -->
+    <EditText
+        android:id="@+id/etMusteriAdi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Müşteri Adı"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <!-- Telefon label -->
+    <TextView
+        android:id="@+id/tvLabelTelefon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Telefon Numarası"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:paddingTop="16dp"
+        android:paddingBottom="4dp" />
+
+    <!-- Telefon input -->
+    <EditText
+        android:id="@+id/etTelefon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Telefon Numarası"
+        android:inputType="phone"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+</LinearLayout>

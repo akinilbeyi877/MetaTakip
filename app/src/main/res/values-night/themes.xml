@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MetaTakip.Light" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Üst bar arka plan (örnek mor veya teal seçebilirsin) -->
+        <item name="colorPrimary">@color/purple_700</item>
+
+        <!-- META TAKİP yazı rengi -->
+        <item name="colorOnPrimary">@android:color/white</item>
+
+        <!-- Genel arka plan -->
+        <item name="android:windowBackground">@color/white</item>
+
+        <!-- Varsayılan metin rengi -->
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+</resources>

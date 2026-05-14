@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:outlineProvider="bounds"
+    android:clipToOutline="true"
+    android:elevation="16dp"
+    android:padding="20dp"
+    android:layout_margin="16dp">
+
+    <!-- DRAG HANDLE -->
+<LinearLayout
+android:id="@+id/dragHandle"
+android:layout_width="match_parent"
+android:layout_height="24dp"
+android:gravity="center"
+android:layout_marginBottom="12dp"
+android:orientation="horizontal">
+
+<View
+    android:layout_width="60dp"
+    android:layout_height="6dp"
+    android:background="@color/purple_700"
+    android:layout_marginTop="4dp"
+    android:alpha="0.6" />
+</LinearLayout>
+
+    <!-- Title -->
+<TextView
+android:id="@+id/tvTitle"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="📞 GELEN ARAMA"
+android:textSize="20sp"
+android:textStyle="bold"
+android:textColor="@color/purple_700"
+android:gravity="center"
+android:layout_marginBottom="16dp" />
+
+    <!-- Caller Name -->
+<TextView
+android:id="@+id/tvCallerName"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="İsim"
+android:textSize="28sp"
+android:textStyle="bold"
+android:textColor="@color/black"
+android:gravity="center"
+android:layout_marginBottom="8dp" />
+
+    <!-- Caller Number -->
+<TextView
+android:id="@+id/tvCallerNumber"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Numara"
+android:textSize="18sp"
+android:textColor="@color/purple_500"
+android:gravity="center"
+android:layout_marginBottom="8dp" /> <!-- Margin 16'dan 8'e değişti -->
+
+    <!-- 🏢 FIRMA BİLGİSİ (YENİ EKLENDİ) -->
+<TextView
+android:id="@+id/tvFirma"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text=""
+android:textSize="16sp"
+android:textStyle="bold"
+android:textColor="@color/blue"
+android:gravity="center"
+android:layout_marginBottom="16dp"
+android:visibility="gone"
+    tools:text="🏢 ABC Tekstil Ltd. Şti."
+    tools:visibility="visible" /> 
+
+    <!-- Status -->
+<TextView
+android:id="@+id/tvKayitDurumu"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Durum"
+android:textSize="14sp"
+android:textColor="@color/black"
+android:gravity="center"
+android:lineSpacingExtra="4dp"
+android:layout_marginBottom="24dp" />
+
+    <!-- 📞 ARA -->
+<Button
+android:id="@+id/btnCall"
+android:layout_width="match_parent"
+android:layout_height="56dp"
+android:text="📞 TEKRAR ARA"
+android:textSize="16sp"
+android:textStyle="bold"
+android:backgroundTint="@color/green"
+android:textColor="@color/white"
+android:layout_marginBottom="12dp" />
+
+    <!-- 🧾 SİPARİŞ EKLE (YENİ) -->
+<Button
+android:id="@+id/btnSiparisEkle"
+android:layout_width="match_parent"
+android:layout_height="56dp"
+android:text="🧾 SİPARİŞ EKLE"
+android:textSize="16sp"
+android:textStyle="bold"
+android:backgroundTint="@color/blue"
+android:textColor="@color/white"
+android:layout_marginBottom="12dp" />
+
+    <!-- 👤 MÜŞTERİ EKLE / DÜZENLE -->
+<Button
+android:id="@+id/btnYeniMusteriEkle"
+android:layout_width="match_parent"
+android:layout_height="56dp"
+android:text="➕ MÜŞTERİ OLARAK KAYDET"
+android:textSize="16sp"
+android:textStyle="bold"
+android:backgroundTint="@color/purple_500"
+android:textColor="@color/white"
+android:layout_marginBottom="12dp" />
+
+    <!-- ❌ KAPAT -->
+<Button
+android:id="@+id/btnKapat"
+android:layout_width="match_parent"
+android:layout_height="56dp"
+android:text="❌ KAPAT"
+android:textSize="16sp"
+android:textStyle="bold"
+android:backgroundTint="@color/red"
+android:textColor="@color/white" />
+
+    </LinearLayout>

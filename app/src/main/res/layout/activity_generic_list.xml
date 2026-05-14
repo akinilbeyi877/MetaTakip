@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="6dp"
+    android:background="#F0F4F8">
+
+    <TextView
+        android:id="@+id/pageTitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="4dp"
+        android:textColor="#333"
+        android:visibility="gone" />
+
+    <!-- ÜST SATIR: + Yeni + Arama -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="6dp">
+
+        <Button
+            android:id="@+id/btnAddNew"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="+ Yeni"
+            android:visibility="visible"
+            android:backgroundTint="#1565C0"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="14dp"
+            android:layout_marginEnd="6dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="6dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="38dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_search_rounded"
+            android:paddingHorizontal="8dp"
+            android:elevation="1dp"
+            android:gravity="center_vertical">
+
+            <ImageView android:layout_width="18dp" android:layout_height="18dp"
+                android:src="@android:drawable/ic_menu_search" app:tint="#757575" android:layout_marginEnd="6dp" />
+
+            <EditText android:id="@+id/searchEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Ara..."
+                android:background="@android:color/transparent"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:inputType="text"
+                android:textSize="13sp"/>
+
+            <ImageButton
+                android:id="@+id/btnClearSearch"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                app:tint="#999"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/btnFilterMenu"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                app:tint="#1565C0" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 📅 KOMPAKT TARİH PANELİ -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dateFilterPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="1dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Üst Navigasyon: ok + tarih + ok + Tümünü -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="6dp">
+
+                <ImageButton
+                    android:id="@+id/btnPrevDay"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_chevron_right"
+                    android:rotation="180"
+                    app:tint="#64748B" />
+
+                <LinearLayout
+                    android:id="@+id/btnPickDate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:id="@+id/tvCurrentDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8 May"
+                        android:textColor="#1E293B"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="6dp"
+                        android:src="@drawable/ic_calendar"
+                        app:tint="#1976D2" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnNextDay"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_chevron_right"
+                    app:tint="#64748B" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnShowAllOrders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="4dp"
+                    android:text="Tümü"
+                    android:textColor="@android:color/white"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="10dp"
+                    android:backgroundTint="#1565C0"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    app:cornerRadius="6dp" />
+
+            </LinearLayout>
+
+            <!-- Yatay Tarih Şeridi -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDateStrip"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_date_strip" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- KOMPAKT İSTATİSTİK PANELİ -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/statsPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="#1565C0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/tvStatsPanelTitle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                android:text="" />
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="horizontal" android:gravity="center">
+                <TextView android:id="@+id/tvStat1Icon" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="#" android:textSize="11sp" android:textColor="#FFFFFF" android:layout_marginEnd="3dp"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+                    <TextView android:id="@+id/tvStat1Value" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="0" android:textColor="#FFFFFF"
+                        android:textSize="14sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvStat1Label" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="Toplam" android:textColor="#BBDEFB" android:textSize="9sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="horizontal" android:gravity="center">
+                <TextView android:id="@+id/tvStat2Icon" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="#" android:textSize="11sp" android:textColor="#FFFFFF" android:layout_marginEnd="3dp"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+                    <TextView android:id="@+id/tvStat2Value" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="0" android:textColor="#FFFFFF"
+                        android:textSize="14sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvStat2Label" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="---" android:textColor="#BBDEFB" android:textSize="9sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="horizontal" android:gravity="center">
+                <TextView android:id="@+id/tvStat3Icon" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="#" android:textSize="11sp" android:textColor="#FFFFFF" android:layout_marginEnd="3dp"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+                    <TextView android:id="@+id/tvStat3Value" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="0" android:textColor="#FFFFFF"
+                        android:textSize="14sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvStat3Label" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="---" android:textColor="#BBDEFB" android:textSize="9sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="horizontal" android:gravity="center">
+                <TextView android:id="@+id/tvStat4Icon" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="#" android:textSize="11sp" android:textColor="#FFFFFF" android:layout_marginEnd="3dp"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+                    <TextView android:id="@+id/tvStat4Value" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="0" android:textColor="#FFFFFF"
+                        android:textSize="14sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvStat4Label" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="---" android:textColor="#BBDEFB" android:textSize="9sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ListView
+        android:id="@+id/genericListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:background="@android:color/transparent"
+        android:clipToPadding="false"
+        android:paddingBottom="12dp"
+        android:scrollbars="none" />
+
+</LinearLayout>

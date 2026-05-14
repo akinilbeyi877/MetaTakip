@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <!-- ACCOUNT -->
+
+        <TextView
+            android:id="@+id/tvAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bağlı hesap: Yok"
+            android:textStyle="bold" />
+
+
+        <!-- DRIVE -->
+
+        <Button
+            android:id="@+id/btnConnectDrive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Drive Bağlan" />
+
+        <Button
+            android:id="@+id/btnDisconnectDrive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Drive Bağlantıyı Kaldır" />
+
+
+        <!-- AUTO BACKUP -->
+
+        <Button
+            android:id="@+id/btnEnableAuto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Otomatik Yedek Aç" />
+
+
+        <!-- SNAPSHOT -->
+
+        <Button
+            android:id="@+id/btnSnapshot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Snapshot Al" />
+
+        <Button
+            android:id="@+id/btnRestorePoints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Restore Geçmişi" />
+
+
+        <!-- ======================= -->
+        <!-- TEMPLATE -->
+        <!-- ======================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Şablon İndir"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <Button
+            android:id="@+id/btnTemplateFirma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Firma Şablon" />
+
+        <Button
+            android:id="@+id/btnTemplateMusteri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Müşteri Şablon" />
+
+        <Button
+            android:id="@+id/btnTemplateUrunTipi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ürün Tipi Şablon" />
+
+        <Button
+            android:id="@+id/btnTemplateMesaj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mesaj Şablon" />
+
+        <Button
+            android:id="@+id/btnTemplateUnvan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ünvan Şablon" />
+
+
+        <!-- ======================= -->
+        <!-- IMPORT -->
+        <!-- ======================= -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Import"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <Button
+            android:id="@+id/btnImportJson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="JSON Import" />
+
+        <TextView
+            android:id="@+id/tvImportPreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Import Önizleme"
+            android:paddingTop="8dp" />
+
+
+        <!-- ======================= -->
+        <!-- DOWNLOADED FILES -->
+        <!-- ======================= -->
+
+        <TextView
+            android:id="@+id/tvDownloadedTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="İndirilen Dosyalar"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutDownloadedFiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp" />
+
+
+        <!-- ======================= -->
+        <!-- LOG -->
+        <!-- ======================= -->
+
+        <TextView
+            android:id="@+id/tvLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log"
+            android:paddingTop="16dp" />
+
+
+    </LinearLayout>
+
+</ScrollView>

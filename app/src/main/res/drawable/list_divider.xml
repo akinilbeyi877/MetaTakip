@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- 🔹 Çizgi rengi (açık gri ton) -->
+    <solid android:color="#E0E0E0" />
+
+    <!-- 🔹 Çizgi yüksekliği (1dp yeterlidir) -->
+    <size android:height="1dp" />
+
+</shape>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ETİKET ÖNİZLEME DIALOG'U
+- Scroll destekli
+- Padding, yazı boyutu, renk ayarlı
+- Küçük ekranlarda taşmaz
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- BAŞLIK -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🧾 Etiket Önizleme / Sayfa Düzeni"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <!-- SAYFA DÜZENİ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sayfa Düzeni (dp)"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:useDefaultMargins="true"
+            android:layout_marginBottom="12dp">
+
+            <EditText
+                android:id="@+id/etPaddingTop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:hint="Üst"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etPaddingBottom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:hint="Alt"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etPaddingLeft"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:hint="Sol"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etPaddingRight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:hint="Sağ"
+                android:inputType="number" />
+        </GridLayout>
+
+        <!-- YAZI AYARLARI -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yazı Ayarları"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/etTextSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Yazı Boyutu (sp)  Örn: 12"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="8dp" />
+
+        <!-- RENK SEÇ -->
+        <Button
+            android:id="@+id/btnRenkSec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎨 Yazı Rengini Seç"
+            android:layout_marginBottom="12dp" />
+
+
+        <!-- ÖNİZLEME -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Etiket Önizleme"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/tvPreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EEEEEE"
+            android:padding="12dp"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:typeface="monospace" />
+
+        <!-- BUTONLAR -->
+        <Button
+            android:id="@+id/btnYazdir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🖨️ Yazdır"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnDuzenle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="← Bileşenleri Düzenle"
+            android:layout_marginTop="4dp" />
+
+        <Button
+            android:id="@+id/btnKapat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="✕ Kapat"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+</ScrollView>

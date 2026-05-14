@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- ÜST SATIR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iconCustomer"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:id="@+id/textCustomerName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/textStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="3dp"
+                android:textSize="11sp"
+                android:background="@drawable/bg_status_tag_small"
+                android:gravity="center" />
+
+            <ImageButton
+                android:id="@+id/buttonExpand"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="Genişlet" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textItemCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="34dp"
+            android:textSize="12sp"
+            app:cardBackgroundColor="@color/bg_customer"
+            app:cardElevation="2dp"
+            android:textColor="@color/text_secondary" />
+
+        <!-- ✅ GERİ YÜKLE BUTONU (DÜZELTİLDİ) -->
+        <Button
+            android:id="@+id/buttonRestoreCustomer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="34dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp"
+        android:visibility="gone"
+        android:text="🗑️ Geri Yükle"
+        android:drawableStart="@drawable/ic_restore"
+        android:drawablePadding="6dp"
+        android:textSize="12sp"
+        android:textColor="@color/color_red"
+        style="?android:attr/borderlessButtonStyle" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

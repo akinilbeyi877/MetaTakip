@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "794416975212",
+    "project_id": "metatakip-1d942",
+    "storage_bucket": "metatakip-1d942.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794416975212:android:80bfb4d3bbe6d8c7213749",
+        "android_client_info": {
+          "package_name": "com.example.metatakip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794416975212-gq675iq44bm3m511ttv47p43bpqa7ju9.apps.googleusercontent.com",
+          "client_type": 3,
+          "android_info": {
+            "package_name": "com.example.metatakip",
+            "certificate_hash": "6C:56:22:6D:B6:4F:36:69:FF:6D:FF:01:18:D7:A7:C5:DD:61:E2:0C"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvAiqci7ezfCjEDFbFNqLQrxY-Eyhg3Z0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

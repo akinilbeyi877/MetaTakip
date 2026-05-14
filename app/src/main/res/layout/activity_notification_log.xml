@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F0F0">
+
+    <!-- ── Başlık çubuğu ── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="4dp"
+        android:paddingEnd="8dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@android:drawable/ic_menu_revert"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Geri" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="🔔 Bildirim Kayıtları"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#212121" />
+
+        <!-- Sağ boşluk dengesi için -->
+        <View
+            android:layout_width="44dp"
+            android:layout_height="44dp" />
+    </LinearLayout>
+
+    <!-- ── Scroll içeriği ── -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Temizle butonu -->
+            <Button
+                android:id="@+id/btnClearNotifications"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="🗑️  BİLDİRİMLERİ TEMİZLE"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:backgroundTint="#D32F2F"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Arama -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@android:color/white"
+                android:paddingStart="12dp"
+                android:paddingEnd="8dp"
+                android:layout_marginBottom="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔍 "
+                    android:textSize="16sp"
+                    android:textColor="#9E9E9E" />
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Ara (isim, ürün, firma...)"
+                    android:textSize="13sp"
+                    android:textColor="#212121"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:imeOptions="actionSearch"
+                    android:maxLines="1" />
+                <TextView
+                    android:id="@+id/btnSortToggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⇅"
+                    android:textSize="20sp"
+                    android:textColor="#1565C0"
+                    android:padding="4dp"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <!-- Tarih navigasyonu -->
+            <LinearLayout
+                android:id="@+id/layoutDateNav"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@android:color/white"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:id="@+id/btnDatePrev"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="&lt;"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#424242"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/tvCurrentDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11 Mayıs 2026 Pzt"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#212121" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 📅"
+                        android:textSize="14sp"
+                        android:clickable="true"
+                        android:focusable="true" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btnDateNext"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="&gt;"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#424242"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+            </LinearLayout>
+
+            <!-- Gün serit (5 gün) -->
+            <LinearLayout
+                android:id="@+id/layoutDayStrip"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:orientation="horizontal"
+                android:background="@android:color/white"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout android:id="@+id/dayCell0" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center" android:clickable="true" android:focusable="true">
+                    <TextView android:id="@+id/tvDay0Num" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center" android:textSize="15sp" android:textStyle="bold" android:textColor="#FFFFFF" android:text="11/05" />
+                    <TextView android:id="@+id/tvDay0Name" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:textSize="10sp" android:textColor="#FFFFFF" android:text="Pzt" />
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/dayCell1" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center" android:clickable="true" android:focusable="true">
+                    <TextView android:id="@+id/tvDay1Num" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center" android:textSize="15sp" android:textStyle="bold" android:textColor="#424242" android:text="12/05" />
+                    <TextView android:id="@+id/tvDay1Name" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:textSize="10sp" android:textColor="#757575" android:text="Sal" />
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/dayCell2" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center" android:clickable="true" android:focusable="true">
+                    <TextView android:id="@+id/tvDay2Num" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center" android:textSize="15sp" android:textStyle="bold" android:textColor="#424242" android:text="13/05" />
+                    <TextView android:id="@+id/tvDay2Name" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:textSize="10sp" android:textColor="#757575" android:text="Çar" />
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/dayCell3" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center" android:clickable="true" android:focusable="true">
+                    <TextView android:id="@+id/tvDay3Num" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center" android:textSize="15sp" android:textStyle="bold" android:textColor="#424242" android:text="14/05" />
+                    <TextView android:id="@+id/tvDay3Name" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:textSize="10sp" android:textColor="#757575" android:text="Per" />
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/dayCell4" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center" android:clickable="true" android:focusable="true">
+                    <TextView android:id="@+id/tvDay4Num" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center" android:textSize="15sp" android:textStyle="bold" android:textColor="#424242" android:text="15/05" />
+                    <TextView android:id="@+id/tvDay4Name" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:textSize="10sp" android:textColor="#757575" android:text="Cum" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- İstatistikler -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#1565C0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔔 Sipariş Bildirimleri"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Toplam -->
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tvStatTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Toplam" android:textColor="#BBDEFB" android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <!-- Bugün -->
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tvStatToday" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bugün" android:textColor="#BBDEFB" android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <!-- Bu Hafta -->
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tvStatWeek" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bu Hafta" android:textColor="#BBDEFB" android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <!-- Seçili Gün -->
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                            <TextView android:id="@+id/tvStatSelected" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Seçili Gün" android:textColor="#BBDEFB" android:textSize="11sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Bildirim listesi -->
+            <LinearLayout
+                android:id="@+id/layoutNotifList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <!-- Boş durum mesajı -->
+            <TextView
+                android:id="@+id/tvEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Bu gün için bildirim kaydı yok."
+                android:textColor="#9E9E9E"
+                android:textSize="14sp"
+                android:padding="32dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

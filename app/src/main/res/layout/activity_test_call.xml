@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/light_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/test_panel_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/purple_700"
+            android:layout_marginBottom="24dp"
+            android:padding="8dp" />
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hazır..."
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp" />
+
+        <!-- Test Data Inputs -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="16dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Test Verileri"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Phone Number -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Numara:"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/etTestNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="05551234567"
+                    android:inputType="phone"
+                    android:text="05551234567" />
+
+            </LinearLayout>
+
+            <!-- Caller Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="İsim:"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/etTestName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="Test Müşteri"
+                    android:text="Test Müşteri" />
+
+            </LinearLayout>
+
+            <!-- Effects -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchSound"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ses Efekti"
+                    android:checked="true" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchVibrate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Titreşim"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Test Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="16dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Test Senaryoları"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Simulate Call Button -->
+            <Button
+                android:id="@+id/btnSimulateCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_simulate_call"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/white"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Manual Popup Button -->
+            <Button
+                android:id="@+id/btnManualPopup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_manual_popup"
+                android:textSize="16sp"
+                android:backgroundTint="@color/blue"
+                android:textColor="@color/white"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Test CallReceiver Button -->
+            <Button
+                android:id="@+id/btnTestCallReceiver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_test_call_receiver"
+                android:textSize="16sp"
+                android:backgroundTint="@color/orange"
+                android:textColor="@color/white"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Check Permissions Button -->
+            <Button
+                android:id="@+id/btnCheckPermissions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_check_permissions"
+                android:textSize="16sp"
+                android:backgroundTint="@color/purple_500"
+                android:textColor="@color/white"
+                android:padding="12dp" />
+
+        </LinearLayout>
+
+        <!-- Instructions -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/test_instructions"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:padding="16dp"
+            android:elevation="2dp" />
+
+    </LinearLayout>
+
+</ScrollView>

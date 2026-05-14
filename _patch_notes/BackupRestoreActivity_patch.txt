@@ -1,0 +1,46 @@
+=== BackupRestoreActivity.kt İÇİNDE YAPILACAK 2 KÜÇÜK DEĞİŞİKLİK ===
+
+────────────────────────────────────────────────────────
+DEĞİŞİKLİK 1 — signInLauncher (Drive BAĞLANINCA)
+────────────────────────────────────────────────────────
+
+MEVCUT KOD (satır ~239):
+    BackupPreferences.setDriveConnected(true)
+    BackupPreferences.setDriveEmail(account.email)
+    updateAccountInfo()
+    lifecycleScope.launch { refreshDevicePanels() }
+    log("✅ Drive bağlandı: ${account.email}")
+    toast("Drive bağlantısı başarılı")
+
+OLACAK KOD:
+    BackupPreferences.setDriveConnected(true)
+    BackupPreferences.setDriveEmail(account.email)
+    // 🔧 KRİTİK: email kaydedildikten SONRA Firebase dinleyicisini yeni groupId ile yeniden başlat
+    FirebaseRealtimeBridgeManager.onDriveAccountChanged(this)
+    updateAccountInfo()
+    lifecycleScope.launch { refreshDevicePanels() }
+    log("✅ Drive bağlandı: ${account.email}")
+    toast("Drive bağlantısı başarılı")
+
+────────────────────────────────────────────────────────
+DEĞİŞİKLİK 2 — btnDisconnectDrive (Drive KESİLİNCE)
+────────────────────────────────────────────────────────
+
+MEVCUT KOD (satır ~392):
+    BackupPreferences.setDriveConnected(false)
+    BackupPreferences.setDriveEmail(null)
+    BackupPreferences.setAutoBackupEnabled(false)
+    AutoBackupScheduler.cancelAll(this)
+    updateAccountInfo()
+    ...
+
+OLACAK KOD:
+    BackupPreferences.setDriveConnected(false)
+    BackupPreferences.setDriveEmail(null)
+    BackupPreferences.setAutoBackupEnabled(false)
+    AutoBackupScheduler.cancelAll(this)
+    // 🔧 Drive kesildikten sonra dinleyiciyi de güncelle
+    FirebaseRealtimeBridgeManager.onDriveAccountChanged(this)
+    updateAccountInfo()
+    ...
+

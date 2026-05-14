@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Mevcut renkler (tek seferde) -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_gray">#F2F2F2</color>
+
+    <!-- Call Popup için renkler -->
+    <color name="green">#4CAF50</color>
+    <color name="blue">#2196F3</color>
+    <color name="red">#F44336</color>
+    <color name="orange">#FF9800</color>
+
+    <!-- Ek renkler -->
+    <color name="gray">#9E9E9E</color>
+
+    <!-- ✅ EKSİK RENKLER EKLENDİ (HATALARI ÇÖZECEK) -->
+    <color name="colorPrimary">#FF6200EE</color>
+    <color name="gray_700">#616161</color>
+
+    <!-- Temel renkler -->
+    <color name="primary">#1976D2</color>
+    <color name="primary_dark">#1565C0</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F5F5F5</color>
+    <color name="on_surface">#212121</color>
+
+    <!-- Renk paleti -->
+    <color name="color_black">#000000</color>
+    <color name="color_red">#D32F2F</color>
+    <color name="color_blue">#1976D2</color>
+    <!-- 🟧 Turuncu (Başlık / Genel Toplam) -->
+    <color name="orange_main">#FFB133</color>
+    <color name="orange_dark">#F39C12</color>
+
+    <!-- 🟩 Yeşil (Kaydet / Ürün Ekle) -->
+    <color name="green_main">#1ABC9C</color>
+    <color name="green_dark">#16A085</color>
+
+    <!-- 🟦 Mavi (Ücret Ekle) -->
+    <color name="blue_main">#3498DB</color>
+
+    <!-- 🟥 Kırmızı (Sil) -->
+    <color name="red_main">#E74C3C</color>
+
+    <!-- ⚪ Arka Planlar -->
+    <color name="bg_screen">#F5F5F5</color>
+    <color name="bg_card">#FFFFFF</color>
+
+    <!-- ✨ Aktif / Pasif Alan -->
+    <color name="active_bg">#ECFDF9</color>
+    <color name="active_border">#1ABC9C</color>
+
+    <color name="passive_bg">#EEEEEE</color>
+    <color name="passive_border">#BDBDBD</color>
+
+    <!-- 🖊️ Metin -->
+    <color name="text_dark">#212121</color>
+    <color name="text_muted">#9E9E9E</color>
+
+
+    <!-- Çağrı Türü Renkleri -->
+    <color name="call_incoming_bg">#E8F5E9</color> <!-- Açık Yeşil -->
+    <color name="call_incoming_text">#2E7D32</color> <!-- Koyu Yeşil -->
+
+    <color name="call_outgoing_bg">#E3F2FD</color> <!-- Açık Mavi -->
+    <color name="call_outgoing_text">#1565C0</color> <!-- Koyu Mavi -->
+
+    <color name="call_missed_bg">#FFF3E0</color> <!-- Açık Turuncu -->
+    <color name="call_missed_text">#EF6C00</color> <!-- Koyu Turuncu -->
+
+    <!-- Durum Renkleri -->
+    <color name="status_synced">#4CAF50</color> <!-- Yeşil -->
+    <color name="status_pending">#FF9800</color> <!-- Turuncu -->
+    <color name="status_error">#F44336</color> <!-- Kırmızı -->
+
+    <!-- Genel Renkler -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_shadow">#20000000</color>
+
+    <!-- Renkler -->
+    <color name="color_orange">#FF9500</color>
+    <color name="color_green">#34C759</color>
+    <color name="color_gray">#8E8E93</color>
+
+    <!-- Metin renkleri -->
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#666666</color>
+    <color name="text_warning">#FF9500</color>
+
+    <!-- Arkaplan renkleri -->
+    <color name="card_background_light">#F5F5F5</color>
+    <color name="status_background">#FFFFFF</color>
+    <color name="status_border">#E0E0E0</color>
+    <!-- Yeni eklenmesi gereken renkler -->
+    <color name="gray_light">#E0E0E0</color>
+    <!-- Durum renkleri -->
+    <color name="status_deleted">#dc3545</color>
+    <color name="status_active">#28a745</color>
+    <color name="status_warning">#fd7e14</color>
+    <color name="status_info">#17a2b8</color>
+
+    <!-- Arkaplan renkleri -->
+    <color name="background_deleted_light">#fff5f5</color>
+    <color name="background_warning_light">#fff9f5</color>
+    <color name="background_normal">#ffffff</color>
+    <color name="background_card">#f8f9fa</color>
+
+    <!-- İkon renkleri -->
+    <color name="icon_primary">#495057</color>
+    <color name="icon_success">#28a745</color>
+    <color name="icon_warning">#fd7e14</color>
+    <color name="icon_error">#dc3545</color>
+
+    <!-- Buton renkleri -->
+    <color name="button_restore">#17a2b8</color>
+    <color name="button_restore_text">#ffffff</color>
+
+    <!-- Metin renkleri -->
+
+    <color name="success_green">#198754</color>
+    <color name="warning_orange">#fd7e14</color>
+
+    <!-- Diğer -->
+    <color name="connector_line">#dee2e6</color>
+    <!-- Yeni durum renkleri -->
+    <color name="status_mixed">#FFC107</color>
+    <color name="icon_mixed">#FFC107</color>
+
+    <!-- Yeni arkaplan renkleri -->
+    <color name="background_mixed_light">#FFF9F5</color>
+
+    <!-- Buton renkleri -->
+    <color name="button_view_details">#6C757D</color>
+    <!-- Müşteri durum renkleri -->
+    <!-- Eksik renkleri ekleyin -->
+    <color name="status_inactive">#6C757D</color>
+    <color name="background_success_light">#D1E7DD</color>
+
+    <color name="background_inactive_light">#F8F9FA</color>
+    <!-- Temel renkler -->
+    <!-- Mevcut renkleriniz -->
+
+    <!-- Eksik renkleri ekleyin -->
+    <color name="icon_secondary">#8E8E93</color>
+    <color name="icon_gray">#8E8E93</color>
+    <color name="divider_light">#E0E0E0</color>
+
+    <!-- Veya alternatif isimler -->
+    <!-- Hiyerarşi arkaplanları -->
+    <color name="bg_customer">#FFFFFF</color>
+    <color name="bg_order">#FFF3E0</color>
+    <color name="bg_product">#E8F5E9</color>
+
+
+
+    <!-- Genel toplam için turuncu renk -->
+    <color name="orange_light">#FFFFCC80</color>
+
+    <!-- Veya eski colorAccent'ı ekleyin -->
+    <color name="colorAccent">#FF4081</color> <!-- Pembe tonu -->
+
+
+
+
+
+</resources>

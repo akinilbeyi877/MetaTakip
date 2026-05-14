@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="CHOOSE_PER_TEST" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/feature_admin" />
+            <option value="$PROJECT_DIR$/feature_backup" />
+            <option value="$PROJECT_DIR$/feature_customer" />
+            <option value="$PROJECT_DIR$/feature_data" />
+            <option value="$PROJECT_DIR$/feature_firma" />
+            <option value="$PROJECT_DIR$/feature_genericlist" />
+            <option value="$PROJECT_DIR$/feature_label" />
+            <option value="$PROJECT_DIR$/feature_order" />
+            <option value="$PROJECT_DIR$/feature_personel" />
+            <option value="$PROJECT_DIR$/feature_unvan" />
+            <option value="$PROJECT_DIR$/feature_uruntipi" />
+            <option value="$PROJECT_DIR$/permissions" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

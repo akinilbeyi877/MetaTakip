@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_customer">Müşteri: %1$s</string>
+
+    <string name="call_logs_title">Çağrı Kayıtları</string>
+    <string name="add_call">Yeni Çağrı Ekle</string>
+    <string name="customer_phone">Müşteri Telefonu</string>
+    <string name="customer_name">Müşteri Adı</string>
+    <string name="company_name">Firma Adı</string>
+    <string name="department">Departman</string>
+    <string name="phone">Telefon</string>
+    <string name="device_name">Cihaz Adı</string>
+    <string name="fill_test_data">Test Verisi Doldur</string>
+    <string name="required_field">Bu alan zorunludur</string>
+    <!-- 🧩 Uygulama Bilgileri -->
+    <string name="app_name">META TAKİP</string>
+    <string name="mega_takip_ana_menu">META TAKİP ANA MENÜ</string>
+    <string name="hosgeldin_mesaji">HOŞ GELDİN, METATAKİP!</string>
+
+    <!-- 📋 GENERIC LIST -->
+    <string name="btn_add_new">+ YENİ</string>
+    <string name="search_hint">Ara (isim, ürün, telefon...)</string>
+
+    <!-- 👥 Müşteri -->
+    <string name="musteriler">👥 MÜŞTERİLER</string>
+    <string name="no_customers">HENÜZ MÜŞTERİ EKLENMEDİ</string>
+    <string name="yeni_musteri_ekle">➕ YENİ MÜŞTERİ EKLE</string>
+    <string name="Yeni_Müşteri_Ekle_contener_iç_başlik">YENİ MÜŞTERİ EKLE SAYFASI</string>
+
+    <!-- 📋 Müşteri Alanları -->
+    <string name="musteri_ad_soyad">Ad Soyad</string>
+    <string name="musteri_adres">Adres</string>
+    <string name="musteri_telefon">Cep Telefonu</string>
+    <string name="musteri_not">Not Ekle</string>
+    <string name="musteri_kaydet">Kaydet</string>
+
+    <!-- 🎙️ Mikrofon -->
+    <string name="mic_ad_soyad_aciklama">Ad Soyad alanını sesle doldur</string>
+    <string name="mic_adres_aciklama">Adres alanını sesle doldur</string>
+    <string name="mic_tel_aciklama">Telefon alanını sesle doldur</string>
+    <string name="mic_not_aciklama">Not alanını sesle doldur</string>
+
+    <!-- 💾 Genel -->
+    <string name="save">Kaydet</string>
+    <string name="cancel">İptal</string>
+    <string name="kapat">Kapat</string>
+
+    <!-- 📞 Çağrı -->
+    <string name="caller_unknown">Bilinmeyen Arayan</string>
+    <string name="caller_number_example">+90…</string>
+    <string name="btn_save_number">Bu Numarayı Kaydet</string>
+    <string name="btn_close">Kapat</string>
+    <string name="btn_new_customer">Yeni Müşteri Ekle</string>
+
+    <!-- 🛒 Sipariş -->
+    <string name="siparis_tutar_hint">Sipariş tutarını söyle</string>
+    <string name="sesle_tutar_gir_aciklama">Sesle tutar gir</string>
+    <string name="btn_siparis_alindi">📦 Sipariş Alındı</string>
+    <string name="btn_teslim_edildi">🚚 Teslim Edildi</string>
+
+    <string-array name="siparis_durumlari">
+        <item>Yeni Sipariş</item>
+        <item>Alınacaklar</item>
+        <item>Tekrar İşleme Alındı</item>
+        <item>Teslim Alındı</item>
+        <item>Teslim Edildi</item>
+        <item>Yıkamada</item>
+        <item>İptal Edildi</item>
+    </string-array>
+
+    <!-- ✏️ İşlemler -->
+    <string name="btn_edit">Düzenle</string>
+    <string name="btn_teslim_et">Müşteriye Teslim Et</string>
+    <string name="btn_teslim_al">Teslim Al</string>
+    <string name="btn_delete">Sil</string>
+    <string name="enter_amount">Tutar giriniz</string>
+    <string name="enter_note">Not ekleyiniz</string>
+
+    <!-- 🧪 Test -->
+    <string name="test_panel_title">📞 CALL RECEIVER TEST PANELİ</string>
+    <string name="btn_simulate_call">🔔 GERÇEKÇİ ARAMA SİMÜLASYONU</string>
+    <string name="btn_manual_popup">📱 MANUEL POPUP AÇ</string>
+    <string name="btn_test_call_receiver">📡 CALLRECEIVER’I TEST ET</string>
+    <string name="btn_check_permissions">🔐 İZİNLERİ KONTROL ET</string>
+
+    <!-- 📄 PDF -->
+    <string name="pdf_yazdirma">PDF / Yazdırma</string>
+    <string name="pdf_kaydet">PDF Kaydet</string>
+    <string name="pdf_ac">PDF Aç</string>
+    <string name="yazdir">Yazdır</string>
+    <string name="test_instructions">
+🔍 TEST YÖNERGELERİ:
+
+1. "İzinleri Kontrol Et" butonu ile tüm izinleri verin
+2. "Gerçekçi Arama Simülasyonu" ile ses + titreşimli test yapın
+3. "CallReceiver Test" ile direkt broadcast gönderin
+4. Logcat’te "CALL_RECEIVER" ve "TEST_CALL" etiketlerini takip edin
+</string>
+    <string name="urun_tipi_bulunamadi">⚠️ Veritabanında aktif ürün tipi bulunamadı. Lütfen önce \'Ürün Tipleri\' sayfasından ürün tipi ekleyin.</string>
+    <string name="urun_tipi_yok">ÜRÜN TİPİ YOK</string>
+    <string name="urun_tipi_bulunamadi_toast">Ürün tipi bulunamadı. Lütfen önce ürün tipi ekleyin.</string>
+    <string name="urun_tipi_bulunamadi_kayit">Ürün tipi bulunamadı. Kayıt yapılamaz.</string>
+    <string name="urun_tipi_secmelisiniz">Geçerli bir ürün tipi seçmelisiniz.</string>
+    <string name="guncelle">GÜNCELLE</string>
+    <string name="adet_sifirdan_buyuk">Adet 0\'dan büyük olmalıdır.</string>
+    <string name="urun_kaydedildi">✅ Ürün kaydedildi</string>
+    <string name="kayit_basarisiz">❌ Kayıt başarısız</string>
+</resources>

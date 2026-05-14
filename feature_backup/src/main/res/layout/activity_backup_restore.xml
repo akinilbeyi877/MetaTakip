@@ -1,0 +1,1678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF2F7"
+    android:fillViewport="true"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ══════════════════════════════════════
+             🔵 HEADER
+             ══════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1976D2"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="☁️ Yedekleme ve Senkronizasyon"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Önce klasör adını belirleyin, ardından Drive'ı bağlayın"
+                android:textSize="12sp"
+                android:textColor="#BBDEFB"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- ══════════════════════════════════════
+             ANA İÇERİK ALANI
+             ══════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- ────────────────────────────────────
+                 BÖLÜM 1: ⚙️ KURULUM  (EN ÜST — önce bu)
+                 ──────────────────────────────────── -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚙️ ADIM 1 — KURULUM"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#90A4AE"
+                android:paddingStart="2dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- ══════════ STEPPER HEADER ══════════ -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="10dp">
+
+                        <!-- Adım 1 -->
+                        <LinearLayout
+                            android:id="@+id/layoutStepTab1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:focusable="true">
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/stepCircle1"
+                                android:layout_width="34dp"
+                                android:layout_height="34dp"
+                                app:cardCornerRadius="17dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#1976D2">
+                                <TextView
+                                    android:id="@+id/tvStep1Num"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="1"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Telefon"
+                                android:textSize="9sp"
+                                android:textColor="#1976D2"
+                                android:textStyle="bold"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/stepLine1"
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="#E0E0E0" />
+
+                        <!-- Adım 2 -->
+                        <LinearLayout
+                            android:id="@+id/layoutStepTab2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:focusable="true">
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/stepCircle2"
+                                android:layout_width="34dp"
+                                android:layout_height="34dp"
+                                app:cardCornerRadius="17dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#E0E0E0">
+                                <TextView
+                                    android:id="@+id/tvStep2Num"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="2"
+                                    android:textColor="#9E9E9E"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Drive"
+                                android:textSize="9sp"
+                                android:textColor="#9E9E9E"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/stepLine2"
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="#E0E0E0" />
+
+                        <!-- Adım 3 -->
+                        <LinearLayout
+                            android:id="@+id/layoutStepTab3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:focusable="true">
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/stepCircle3"
+                                android:layout_width="34dp"
+                                android:layout_height="34dp"
+                                app:cardCornerRadius="17dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#E0E0E0">
+                                <TextView
+                                    android:id="@+id/tvStep3Num"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="3"
+                                    android:textColor="#9E9E9E"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Otomatik"
+                                android:textSize="9sp"
+                                android:textColor="#9E9E9E"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/stepLine3"
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="#E0E0E0" />
+
+                        <!-- Adım 4 -->
+                        <LinearLayout
+                            android:id="@+id/layoutStepTab4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:focusable="true">
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/stepCircle4"
+                                android:layout_width="34dp"
+                                android:layout_height="34dp"
+                                app:cardCornerRadius="17dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#E0E0E0">
+                                <TextView
+                                    android:id="@+id/tvStep4Num"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="4"
+                                    android:textColor="#9E9E9E"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cihaz"
+                                android:textSize="9sp"
+                                android:textColor="#9E9E9E"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/stepLine4"
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="#E0E0E0" />
+
+                        <!-- Adım 5 -->
+                        <LinearLayout
+                            android:id="@+id/layoutStepTab5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:focusable="true">
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/stepCircle5"
+                                android:layout_width="34dp"
+                                android:layout_height="34dp"
+                                app:cardCornerRadius="17dp"
+                                app:cardElevation="2dp"
+                                app:cardBackgroundColor="#E0E0E0">
+                                <TextView
+                                    android:id="@+id/tvStep5Num"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="5"
+                                    android:textColor="#9E9E9E"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Özet"
+                                android:textSize="9sp"
+                                android:textColor="#9E9E9E"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="#F1F5F9" />
+
+                    <!-- ══════════ ADIM 1 İÇERİĞİ — Telefon Klasörü ══════════ -->
+                    <LinearLayout
+                        android:id="@+id/layoutStep1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="14dp"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📂  Telefon Klasörü"
+                            android:textColor="#1A237E"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="4dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yedeklerin telefonda kaydedileceği klasörü seçin"
+                            android:textColor="#90A4AE"
+                            android:textSize="11sp"
+                            android:layout_marginBottom="12dp" />
+
+                        <!-- Seçili telefon klasörü adı -->
+                        <TextView
+                            android:id="@+id/tvPhoneFolderPath"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#FFFDE7"
+                            android:padding="10dp"
+                            android:text="Henüz seçilmedi"
+                            android:textColor="#F57F17"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="8dp" />
+
+                        <!-- Klasör Seç butonu -->
+                        <LinearLayout
+                            android:id="@+id/btnPickBackupFolder"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="#FFF8E1"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="10dp"
+                                app:cardCornerRadius="9dp"
+                                app:cardBackgroundColor="#FFE082"
+                                app:cardElevation="0dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="📂"
+                                    android:textSize="17sp" />
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Telefon Klasörü Seç"
+                                    android:textColor="#1A237E"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/tvPhoneFolderSubtitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Yeni oluştur veya mevcut seç"
+                                    android:textColor="#90A4AE"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="›"
+                                android:textColor="#F9A825"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- İleri butonu — Adım 1 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="end"
+                            android:layout_marginTop="14dp">
+                            <Button
+                                android:id="@+id/btnStep1Next"
+                                android:layout_width="wrap_content"
+                                android:layout_height="42dp"
+                                android:background="#1976D2"
+                                android:text="İleri  →"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="13sp"
+                                android:paddingStart="24dp"
+                                android:paddingEnd="24dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- ══════════ ADIM 2 İÇERİĞİ — Drive Bağlantısı + Klasör ══════════ -->
+                    <LinearLayout
+                        android:id="@+id/layoutStep2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="14dp"
+                        android:visibility="gone">
+
+                        <!-- ── ÜSTTE: Drive Bağlantısı ── -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="☁️  Drive Bağlantısı"
+                            android:textColor="#1A237E"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="8dp" />
+
+                        <!-- Drive Statü Bandı -->
+                        <TextView
+                            android:id="@+id/tvDriveStatusBadge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="18dp"
+                            android:paddingEnd="18dp"
+                            android:paddingTop="13dp"
+                            android:paddingBottom="13dp"
+                            android:text="❌  BAĞLI DEĞİL"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center_vertical"
+                            android:background="#B71C1C" />
+
+                        <!-- Hesap Bilgisi -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp">
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:layout_marginEnd="12dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardBackgroundColor="#E8F5E9"
+                                app:cardElevation="0dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="👤"
+                                    android:textSize="18sp" />
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:id="@+id/tvAccount"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Hesap bağlı değil"
+                                android:textColor="#374151"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                            android:background="#F1F5F9" android:layout_marginStart="64dp" />
+
+                        <!-- Drive Bağla -->
+                        <LinearLayout
+                            android:id="@+id/btnConnectDrive"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:layout_marginEnd="12dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardBackgroundColor="#E8F5E9"
+                                app:cardElevation="0dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="🔗"
+                                    android:textSize="18sp" />
+                            </androidx.cardview.widget.CardView>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Drive Bağla"
+                                    android:textColor="#1A237E"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Google hesabıyla oturum aç"
+                                    android:textColor="#90A4AE"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="›"
+                                android:textColor="#1976D2"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                            android:background="#F1F5F9" android:layout_marginStart="64dp" />
+
+                        <!-- Drive Bağlantısını Kes -->
+                        <LinearLayout
+                            android:id="@+id/btnDisconnectDrive"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:layout_marginEnd="12dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardBackgroundColor="#FCE4EC"
+                                app:cardElevation="0dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="🔌"
+                                    android:textSize="18sp" />
+                            </androidx.cardview.widget.CardView>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Drive Bağlantısını Kes"
+                                    android:textColor="#B71C1C"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Hesabı kaldır ve senkronu durdur"
+                                    android:textColor="#90A4AE"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="›"
+                                android:textColor="#EF5350"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Kuyruk + Son Yedek -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingStart="64dp"
+                            android:paddingEnd="14dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="10dp">
+                            <TextView
+                                android:id="@+id/tvQueueStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Kuyruk: -"
+                                android:textColor="#6B7280"
+                                android:textSize="12sp" />
+                            <TextView
+                                android:id="@+id/tvLastBackupInfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Son yedek: -"
+                                android:textColor="#6B7280"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <!-- ── ALTTA: Drive Klasör Adı ── -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="14dp"
+                            android:layout_marginBottom="12dp"
+                            android:background="#E0E0E0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📁  Drive Klasör Adı"
+                            android:textColor="#1A237E"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="4dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="#FFF8E1"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:layout_marginBottom="8dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="⚠️"
+                                android:textSize="16sp"
+                                android:layout_marginEnd="8dp" />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Tüm cihazlarda aynı Drive klasör adı kullanılmalı. Adı değiştirirseniz bağlantıyı kesip tekrar bağlayın."
+                                android:textColor="#BF360C"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <!-- Gizli — kod uyumu için -->
+                        <EditText
+                            android:id="@+id/etFolderName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+                        <Button
+                            android:id="@+id/btnSaveFolderName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                        <!-- Tıklanabilir satır -->
+                        <LinearLayout
+                            android:id="@+id/btnDriveFolderRow"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="#E3F2FD"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="10dp"
+                                app:cardCornerRadius="9dp"
+                                app:cardBackgroundColor="#90CAF9"
+                                app:cardElevation="0dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="📁"
+                                    android:textSize="17sp" />
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Drive Klasör Adını Seç"
+                                    android:textColor="#1A237E"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/tvDriveFolderRowSubtitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tüm cihazlarda aynı olmalı"
+                                    android:textColor="#90A4AE"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="›"
+                                android:textColor="#1976D2"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvCurrentFolder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="#F0F4FF"
+                            android:padding="10dp"
+                            android:text="Klasör adı: -"
+                            android:textColor="#4B5563"
+                            android:textSize="12sp" />
+
+                        <!-- İleri butonu — Adım 2 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="end"
+                            android:layout_marginTop="14dp">
+                            <Button
+                                android:id="@+id/btnStep2Next"
+                                android:layout_width="wrap_content"
+                                android:layout_height="42dp"
+                                android:background="#1976D2"
+                                android:text="İleri  →"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="13sp"
+                                android:paddingStart="24dp"
+                                android:paddingEnd="24dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- ══════════ ADIM 3 İÇERİĞİ — Otomatik Yedek ══════════ -->
+                    <LinearLayout
+                        android:id="@+id/layoutStep3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="14dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⏰  Otomatik Yedek"
+                            android:textColor="#1A237E"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="4dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Günlük yedek saatlerini seçin, ardından Otomatik Yedek'i açın"
+                            android:textColor="#90A4AE"
+                            android:textSize="11sp"
+                            android:layout_marginBottom="12dp" />
+
+                        <!-- 1. Saat -->
+                        <LinearLayout
+                            android:id="@+id/layoutTime1"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:layout_marginEnd="12dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardBackgroundColor="#EAF3FF"
+                                app:cardElevation="0dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="🕐"
+                                    android:textSize="18sp" />
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="1. Yedek Saati"
+                                android:textColor="#1A237E"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/tvAutoTime1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="09:00"
+                                android:textColor="#1D4ED8"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                            android:background="#F1F5F9" android:layout_marginStart="64dp" />
+
+                        <!-- 2. Saat -->
+                        <LinearLayout
+                            android:id="@+id/layoutTime2"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:layout_marginEnd="12dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardBackgroundColor="#ECFDF5"
+                                app:cardElevation="0dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="🕑"
+                                    android:textSize="18sp" />
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="2. Yedek Saati"
+                                android:textColor="#1A237E"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/tvAutoTime2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="14:00"
+                                android:textColor="#059669"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                            android:background="#F1F5F9" android:layout_marginStart="64dp" />
+
+                        <!-- 3. Saat -->
+                        <LinearLayout
+                            android:id="@+id/layoutTime3"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:layout_marginEnd="12dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardBackgroundColor="#FFF7ED"
+                                app:cardElevation="0dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="🕘"
+                                    android:textSize="18sp" />
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="3. Yedek Saati"
+                                android:textColor="#1A237E"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/tvAutoTime3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="21:00"
+                                android:textColor="#EA580C"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                            android:background="#F1F5F9" android:layout_marginStart="64dp" />
+
+                        <!-- Otomatik Aç/Kapat -->
+                        <LinearLayout
+                            android:id="@+id/btnEnableAuto"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+                                android:layout_marginEnd="12dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardBackgroundColor="#E6F4EA"
+                                app:cardElevation="0dp">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="🤖"
+                                    android:textSize="18sp" />
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Otomatik Yedek Aç / Kapat"
+                                android:textColor="#1A237E"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/tvAutoStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#DC2626"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:paddingTop="4dp"
+                                android:paddingBottom="4dp"
+                                android:text="KAPALI"
+                                android:textColor="#FFFFFF"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- İleri butonu — Adım 3 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="end"
+                            android:layout_marginTop="14dp">
+                            <Button
+                                android:id="@+id/btnStep3Next"
+                                android:layout_width="wrap_content"
+                                android:layout_height="42dp"
+                                android:background="#1976D2"
+                                android:text="İleri  →"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="13sp"
+                                android:paddingStart="24dp"
+                                android:paddingEnd="24dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- ══════════ ADIM 4 İÇERİĞİ — Cihaz Adı ══════════ -->
+                    <LinearLayout
+                        android:id="@+id/layoutStep4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="14dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📱  Cihaz Adı"
+                            android:textColor="#1A237E"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="4dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bu cihaza özgün bir isim belirleyin — senkronizasyon logunda görünür"
+                            android:textColor="#90A4AE"
+                            android:textSize="11sp"
+                            android:layout_marginBottom="12dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="8dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cihaz Adı"
+                                    android:textColor="#1A237E"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Her cihaza farklı isim ver — logda kimin gönderdiği görünür"
+                                    android:textColor="#90A4AE"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+                            <TextView
+                                android:id="@+id/btnDeviceNameInfo"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:gravity="center"
+                                android:text="ℹ️"
+                                android:textSize="16sp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:background="?attr/selectableItemBackgroundBorderless" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/etDeviceName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#F5F7FA"
+                            android:hint="Cihaz adı (ör: KASA-1)"
+                            android:padding="12dp"
+                            android:textColor="#111827"
+                            android:textColorHint="#9CA3AF"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/btnSaveDeviceName"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="8dp"
+                            android:background="#5E35B1"
+                            android:text="Cihaz Adını Kaydet"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tvDeviceInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="#F5F0FF"
+                            android:padding="10dp"
+                            android:text="Cihaz: -"
+                            android:textColor="#4B5563"
+                            android:textSize="12sp" />
+
+                        <!-- İleri butonu — Adım 4 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="end"
+                            android:layout_marginTop="14dp">
+                            <Button
+                                android:id="@+id/btnStep4Next"
+                                android:layout_width="wrap_content"
+                                android:layout_height="42dp"
+                                android:background="#5E35B1"
+                                android:text="Özet  →"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="13sp"
+                                android:paddingStart="24dp"
+                                android:paddingEnd="24dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- ══════════ ADIM 5 İÇERİĞİ — Ön İzleme / Özet ══════════ -->
+                    <LinearLayout
+                        android:id="@+id/layoutStep5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="14dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="✅  Kurulum Özeti"
+                            android:textColor="#1A237E"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="4dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Diğer cihazlara bu bilgileri iletebilirsiniz"
+                            android:textColor="#90A4AE"
+                            android:textSize="11sp"
+                            android:layout_marginBottom="12dp" />
+
+                        <!-- Özet içeriği -->
+                        <TextView
+                            android:id="@+id/tvSummaryContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#F0F4FF"
+                            android:padding="14dp"
+                            android:text=""
+                            android:textColor="#1A237E"
+                            android:textSize="13sp"
+                            android:lineSpacingExtra="4dp"
+                            android:fontFamily="monospace" />
+
+                        <!-- Paylaş / Kopyala butonları -->
+                        <Button
+                            android:id="@+id/btnShareSettings"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="14dp"
+                            android:background="#1976D2"
+                            android:text="📤  WhatsApp / Mesaj ile Paylaş"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:textSize="13sp" />
+
+                        <Button
+                            android:id="@+id/btnCopySettings"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="8dp"
+                            android:background="#455A64"
+                            android:text="📋  Panoya Kopyala"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:textSize="13sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="#FFCDD2" />
+
+                        <Button
+                            android:id="@+id/btnClearDatabaseStep5"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="4dp"
+                            android:background="#B71C1C"
+                            android:text="🗑️  Tüm Verileri Temizle"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ────────────────────────────────────
+                 BÖLÜM 4: 🗄️ MANUEL İŞLEMLER
+                 ──────────────────────────────────── -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🗄️ MANUEL İŞLEMLER"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#90A4AE"
+                android:paddingStart="2dp"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Full Yedek -->
+                    <LinearLayout
+                        android:id="@+id/btnFullBackup"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="12dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardBackgroundColor="#EDE7F6"
+                            app:cardElevation="0dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="📦"
+                                android:textSize="18sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tam Yedek Al"
+                                android:textColor="#1A237E"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tüm veritabanı"
+                                android:textColor="#90A4AE"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="›"
+                            android:textColor="#7E57C2"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="#F1F5F9" android:layout_marginStart="64dp" />
+
+                    <!-- Kısmi Yedek -->
+                    <LinearLayout
+                        android:id="@+id/btnPartialBackup"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="12dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardBackgroundColor="#FFF8E1"
+                            app:cardElevation="0dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="🧩"
+                                android:textSize="18sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Kısmi Yedek Al"
+                                android:textColor="#1A237E"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Seçili tablolar"
+                                android:textColor="#90A4AE"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="›"
+                            android:textColor="#F9A825"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="#F1F5F9" android:layout_marginStart="64dp" />
+
+                    <!-- CSV Export -->
+                    <LinearLayout
+                        android:id="@+id/btnExportCsvAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="12dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardBackgroundColor="#E8F5E9"
+                            app:cardElevation="0dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="📄"
+                                android:textSize="18sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CSV Export"
+                                android:textColor="#1A237E"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tabloları dışa aktar"
+                                android:textColor="#90A4AE"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="›"
+                            android:textColor="#43A047"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="#F1F5F9" android:layout_marginStart="64dp" />
+
+                    <!-- CSV Import -->
+                    <LinearLayout
+                        android:id="@+id/btnImportCsv"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="12dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardBackgroundColor="#F3E5F5"
+                            app:cardElevation="0dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="📥"
+                                android:textSize="18sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CSV Import"
+                                android:textColor="#1A237E"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CSV dosyasından içe aktar"
+                                android:textColor="#90A4AE"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="›"
+                            android:textColor="#AB47BC"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:background="#F1F5F9" android:layout_marginStart="64dp" />
+
+                    <!-- ZIP Restore -->
+                    <LinearLayout
+                        android:id="@+id/btnRestoreFromZip"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="12dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardBackgroundColor="#FFF3E0"
+                            app:cardElevation="0dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="🔁"
+                                android:textSize="18sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ZIP'ten Geri Yükle"
+                                android:textColor="#1A237E"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Yerel ZIP dosyasından geri yükle"
+                                android:textColor="#90A4AE"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="›"
+                            android:textColor="#FB8C00"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ────────────────────────────────────
+                 CSV İMPORT ÖNİZLEME
+                 ──────────────────────────────────── -->
+            <TextView
+                android:id="@+id/tvImportPreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="#FFFFFF"
+                android:padding="14dp"
+                android:text=""
+                android:textColor="#374151"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+            <!-- ────────────────────────────────────
+                 BÖLÜM 5: 📋 SON DEĞİŞİKLİKLER
+                 ──────────────────────────────────── -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📋 SON DEĞİŞİKLİKLER"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#90A4AE"
+                android:paddingStart="2dp"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/tvEmptyChanges"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:gravity="center"
+                        android:text="Henüz değişiklik yok"
+                        android:textColor="#9CA3AF"
+                        android:textSize="13sp"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvRecentChanges"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ────────────────────────────────────
+                 BÖLÜM 6: 📊 CANLI LOG
+                 ──────────────────────────────────── -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📊 CANLI LOG"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#90A4AE"
+                android:paddingStart="2dp"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nestedScrollViewLog"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp">
+
+                    <TextView
+                        android:id="@+id/tvLog"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="14dp"
+                        android:text=""
+                        android:textColor="#374151"
+                        android:textSize="12sp"
+                        android:fontFamily="monospace" />
+                </androidx.core.widget.NestedScrollView>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ────────────────────────────────────
+                 GERİ BUTONU
+                 ──────────────────────────────────── -->
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="16dp"
+                android:background="#1976D2"
+                android:text="← Geri"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

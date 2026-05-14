@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:layout_marginBottom="8dp"
+    android:elevation="2dp"
+    android:clipToPadding="false">
+
+    <!-- Alan Başlığı -->
+    <TextView
+        android:id="@+id/textLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alan Adı"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Normal Text Alanı (Tek Satır) -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/textContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Değer girin..."
+            android:inputType="text"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:maxLines="1" />
+
+        <!-- 🎤 Mikrofon Butonu -->
+        <ImageButton
+            android:id="@+id/btnMic"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Sesle gir"
+            android:src="@drawable/ic_mic" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- Modern Dropdown Alanı (Spinner Yerine) -->
+    <LinearLayout
+        android:id="@+id/btnModernDropdown"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/edittext_background"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="12dp"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/tvSelectedOption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Seçim Yapın..."
+            android:textColor="#1E293B"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⌄"
+            android:textColor="#94A3B8"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- Eski Spinner (Gizli Tutulabilir veya Kaldırılabilir) -->
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/edittext_background"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:visibility="gone" />
+
+    <!-- Çok Satırlı Text Alanı -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/textareaContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/editTextMultiLine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Değer girin..."
+            android:inputType="textMultiLine"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:minHeight="100dp"
+            android:gravity="top"
+            android:maxLines="5" />
+
+        <!-- 🎤 Mikrofon Butonu (Çok Satırlı için) -->
+        <ImageButton
+            android:id="@+id/btnMicMultiLine"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Sesle gir"
+            android:src="@drawable/ic_mic" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- Date Alanı -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/dateContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="GG/AA/YYYY"
+            android:inputType="datetime"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:focusable="false" />
+
+        <!-- Takvim Butonu -->
+        <ImageButton
+            android:id="@+id/btnCalendar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Takvim"
+            android:src="@drawable/ic_calendar" />
+
+        <!-- 🎤 Mikrofon Butonu (Tarih için) -->
+        <ImageButton
+            android:id="@+id/btnMicDate"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Sesle gir"
+            android:src="@drawable/ic_mic" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- Phone Alanı -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/phoneContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="05XX XXX XX XX"
+            android:inputType="phone"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp" />
+
+        <!-- 🎤 Mikrofon Butonu (Telefon için) -->
+        <ImageButton
+            android:id="@+id/btnMicPhone"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Sesle gir"
+            android:src="@drawable/ic_mic" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/card_background"
+    android:elevation="2dp">
+
+    <!-- Üst Satır: Başlık ve Durum -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <!-- Çağrı Başlığı -->
+        <TextView
+            android:id="@+id/tvCallTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📞 Çağrı #1"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Durum -->
+        <TextView
+            android:id="@+id/tvCallStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✅ SENKRON"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:textColor="@android:color/white"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Müşteri Bilgisi -->
+    <TextView
+        android:id="@+id/tvCustomerInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="👤 Müşteri"
+        android:textSize="14sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Şirket Bilgisi -->
+    <TextView
+        android:id="@+id/tvCompanyInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🏢 Şirket"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Cihaz Bilgisi -->
+    <TextView
+        android:id="@+id/tvDeviceInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📱 Cihaz"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Alt Satır: Zaman ve Diğer Bilgiler -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:paddingTop="8dp">
+
+        <!-- Zaman -->
+        <TextView
+            android:id="@+id/tvCallTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🕒 01.01.2024 12:00"
+            android:textSize="12sp"
+            android:textColor="#666666" />
+
+        <!-- SIM Yuvası -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIM1"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:paddingHorizontal="8dp" />
+
+        <!-- Çağrı Türü -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GELEN"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+Aşağıdaki DOSYALARI Android Studio'dan SİLİN (sağ tık → Delete → OK):
+Silmeniz gereken YANLIŞ KONUMDAKI dosyalar — doğruları bu ZIP ile doğru yerlere konuldu.
+
+══════════════════════════════════════════════════════════════
+GRUP 1 — feature_data içinde yanlış yere konan dosyalar
+══════════════════════════════════════════════════════════════
+1) feature_data/src/main/java/com/example/metatakip/feature_data/MetaTakipDb.kt
+   (Doğrusu: …/feature_data/db/MetaTakipDb.kt)
+
+══════════════════════════════════════════════════════════════
+GRUP 2 — feature_order içinde yanlış yere konan dosyalar
+══════════════════════════════════════════════════════════════
+2) feature_order/src/main/java/com/example/metatakip/feature/order/FeatureOrderLoader.kt
+   (Doğrusu: …/feature/order/loaders/FeatureOrderLoader.kt)
+
+3) feature_order/src/main/java/com/example/metatakip/feature/order/FeatureOrderSaver.kt
+   (Doğrusu: …/feature/order/savers/FeatureOrderSaver.kt)
+
+4) feature_order/src/main/java/com/example/metatakip/feature/order/FeatureOrderListProvider.kt
+   (Doğrusu: …/feature/order/providers/FeatureOrderListProvider.kt)
+
+5) feature_order/src/main/java/com/example/metatakip/feature/order/FeatureSiparisDbTables.kt
+   (Doğrusu: feature_data/…/db/feature_siparis/FeatureSiparisDbTables.kt)
+
+══════════════════════════════════════════════════════════════
+GRUP 3 — feature_label içinde yanlış yere konan dosyalar
+══════════════════════════════════════════════════════════════
+6) feature_label/src/main/java/com/example/metatakip/feature/label/FeatureEtiketSablonLoader.kt
+   (Doğrusu: …/feature/label/loaders/FeatureEtiketSablonLoader.kt)
+
+7) feature_label/src/main/java/com/example/metatakip/feature/label/FeatureEtiketSablonSaver.kt
+   (Doğrusu: …/feature/label/savers/FeatureEtiketSablonSaver.kt)
+
+8) feature_label/src/main/java/com/example/metatakip/feature/label/FeatureLabelTableFormProvider.kt
+   (Doğrusu: …/feature/label/providers/FeatureLabelTableFormProvider.kt)
+
+9) feature_label/src/main/java/com/example/metatakip/feature/label/LabelFlowController.kt
+   (Doğrusu: …/feature/label/navigation/LabelFlowController.kt)
+
+10) feature_label/src/main/java/com/example/metatakip/feature/label/EtiketSablonDaoImpl.kt
+    (Doğrusu: …/feature/label/data/EtiketSablonDaoImpl.kt)
+
+══════════════════════════════════════════════════════════════
+GRUP 4 — app modülünde yanlış yere konan dosyalar
+══════════════════════════════════════════════════════════════
+11) app/src/main/java/com/example/metatakip/controllers/musteri/FeatureMusteriDbTables.kt
+    (Doğrusu: feature_data/…/db/feature_musteri/FeatureMusteriDbTables.kt)
+
+12) app/src/main/java/com/example/metatakip/controllers/urun/FeatureUrunDbTables.kt
+    (Doğrusu: feature_data/…/db/feature_urun/FeatureUrunDbTables.kt)
+
+13) app/src/main/java/com/example/metatakip/controllers/musteri/FeatureCustomerSaver.kt
+    (Doğrusu: feature_customer/…/feature/customer/savers/FeatureCustomerSaver.kt)
+
+14) app/src/main/java/com/example/metatakip/controllers/musteri/MetaTakipCustomerDaoImpl.kt
+    (Doğrusu: feature_customer/…/feature/customer/data/MetaTakipCustomerDaoImpl.kt)
+
+══════════════════════════════════════════════════════════════
+GRUP 5 — Önceki versiyonlardan kalan eski dosyalar
+══════════════════════════════════════════════════════════════
+15) app/src/main/java/com/example/metatakip/controllers/allGenericFormAndList/OrderPopupActivity.kt
+    (Doğrusu: controllers/services/ altında zaten var)
+
+16) feature_backup/src/main/java/com/example/metatakip/feature_backup/ui/DriveBackupActivity.kt
+    (Bu ZIP'teki stub ile değiştirildi, eskisi silinmeli)
+
+══════════════════════════════════════════════════════════════
+Sildikten sonra: Build → Clean Project → Rebuild Project
+══════════════════════════════════════════════════════════════

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- BAŞLIK BANDI -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#1976D2"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🏷️ Etiket Boyut Ayarları"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+    <!-- CANVAS ÖNİZLEME ALANI -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#EEF2F7"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Gölge çerçeve -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp">
+
+            <!-- Kağıt gölgesi -->
+            <View
+                android:layout_width="148dp"
+                android:layout_height="118dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:background="#44000000"/>
+
+            <!-- Beyaz etiket kağıdı -->
+            <FrameLayout
+                android:id="@+id/labelCanvas"
+                android:layout_width="140dp"
+                android:layout_height="112dp"
+                android:background="#FFFFFF">
+
+                <View
+                    android:id="@+id/columnDivider"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#BBBBBB"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tvCanvasBoyut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="100 x 80 mm"
+                    android:textSize="11sp"
+                    android:textColor="#888888"
+                    android:gravity="center"/>
+            </FrameLayout>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gerçek boyut önizlemesi"
+            android:textSize="10sp"
+            android:textColor="#9E9E9E"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <!-- AYARLAR KARTI -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Etiket adı -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Etiket adı" android:textSize="12sp" android:textColor="#666666"
+                android:layout_marginBottom="4dp"/>
+            <EditText
+                android:id="@+id/etEtiketAdi"
+                android:layout_width="match_parent" android:layout_height="44dp"
+                android:hint="Etiket adını girin" android:inputType="text"
+                android:paddingStart="12dp" android:paddingEnd="12dp"
+                android:background="@drawable/bg_input_border"
+                android:textSize="14sp" android:layout_marginBottom="14dp"/>
+
+            <!-- Boyut başlığı -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:layout_marginBottom="6dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Etiket boyutu"
+                    android:textSize="12sp" android:textColor="#666666"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="mm ▾" android:textSize="12sp" android:textColor="#1976D2"/>
+            </LinearLayout>
+
+            <!-- Genişlik + Yükseklik -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="8dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Genişlik" android:textSize="11sp" android:textColor="#AAAAAA"
+                        android:layout_marginBottom="2dp"/>
+                    <EditText android:id="@+id/etGenislik"
+                        android:layout_width="match_parent" android:layout_height="44dp"
+                        android:text="100.000" android:inputType="numberDecimal"
+                        android:paddingStart="12dp" android:paddingEnd="12dp"
+                        android:background="@drawable/bg_input_border" android:textSize="14sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Yükseklik" android:textSize="11sp" android:textColor="#AAAAAA"
+                        android:layout_marginBottom="2dp"/>
+                    <EditText android:id="@+id/etYukseklik"
+                        android:layout_width="match_parent" android:layout_height="44dp"
+                        android:text="80.000" android:inputType="numberDecimal"
+                        android:paddingStart="12dp" android:paddingEnd="12dp"
+                        android:background="@drawable/bg_input_border" android:textSize="14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Sütun + Aralık -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="14dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Sütun sayısı" android:textSize="11sp" android:textColor="#AAAAAA"
+                        android:layout_marginBottom="2dp"/>
+                    <EditText android:id="@+id/etSutun"
+                        android:layout_width="match_parent" android:layout_height="44dp"
+                        android:text="1" android:inputType="number"
+                        android:paddingStart="12dp" android:paddingEnd="12dp"
+                        android:background="@drawable/bg_input_border" android:textSize="14sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Aralık (mm)" android:textSize="11sp" android:textColor="#AAAAAA"
+                        android:layout_marginBottom="2dp"/>
+                    <EditText android:id="@+id/etAralik"
+                        android:layout_width="match_parent" android:layout_height="44dp"
+                        android:text="0.000" android:inputType="numberDecimal"
+                        android:paddingStart="12dp" android:paddingEnd="12dp"
+                        android:background="@drawable/bg_input_border" android:textSize="14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Hazır boyutlar -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="⚡ Hazır boyutlar" android:textSize="12sp" android:textColor="#666666"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button android:id="@+id/btn100x80"
+                    android:layout_width="0dp" android:layout_weight="1" android:layout_height="38dp"
+                    android:text="100×80" android:textSize="11sp" android:layout_marginEnd="4dp"
+                    android:backgroundTint="#1976D2" android:textColor="#FFFFFF"
+                    android:insetTop="0dp" android:insetBottom="0dp"
+                    style="?android:attr/borderlessButtonStyle"/>
+                <Button android:id="@+id/btn60x40"
+                    android:layout_width="0dp" android:layout_weight="1" android:layout_height="38dp"
+                    android:text="60×40" android:textSize="11sp" android:layout_marginEnd="4dp"
+                    android:backgroundTint="#E3F2FD" android:textColor="#1976D2"
+                    android:insetTop="0dp" android:insetBottom="0dp"
+                    style="?android:attr/borderlessButtonStyle"/>
+                <Button android:id="@+id/btn50x70"
+                    android:layout_width="0dp" android:layout_weight="1" android:layout_height="38dp"
+                    android:text="50×70" android:textSize="11sp" android:layout_marginEnd="4dp"
+                    android:backgroundTint="#E3F2FD" android:textColor="#1976D2"
+                    android:insetTop="0dp" android:insetBottom="0dp"
+                    style="?android:attr/borderlessButtonStyle"/>
+                <Button android:id="@+id/btn40x30"
+                    android:layout_width="0dp" android:layout_weight="1" android:layout_height="38dp"
+                    android:text="40×30" android:textSize="11sp"
+                    android:backgroundTint="#E3F2FD" android:textColor="#1976D2"
+                    android:insetTop="0dp" android:insetBottom="0dp"
+                    style="?android:attr/borderlessButtonStyle"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0"/>
+
+    <!-- ALT BUTONLAR -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingStart="16dp" android:paddingEnd="16dp" android:background="#FFFFFF">
+        <Button android:id="@+id/btnAyarIptal"
+            android:layout_width="0dp" android:layout_weight="1" android:layout_height="42dp"
+            android:text="İptal" android:textColor="#666666"
+            android:backgroundTint="@android:color/transparent"
+            style="?android:attr/borderlessButtonStyle"/>
+        <Button android:id="@+id/btnAyarKaydet"
+            android:layout_width="0dp" android:layout_weight="2" android:layout_height="42dp"
+            android:text="İLERLE"
+            android:backgroundTint="#1976D2" android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>
