@@ -1,10 +1,12 @@
 import os
 import subprocess
+import openai
 
-PROJECT_DIR = os.getcwd()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def run(cmd):
     print(f"\n>>> {cmd}\n")
+
     result = subprocess.run(
         cmd,
         shell=True,
@@ -18,25 +20,64 @@ def run(cmd):
     if result.stderr:
         print(result.stderr)
 
-    return result.returncode
+def ask_ai(prompt, code):
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            {
+                "role": "system",
+                "content": "You are an Android Kotlin developer. Return only updated code."
+            },
+            {
+                "role": "user",
+                "content": f"""
+PROMPT:
+{prompt}
 
-def show_status():
-    run("git status")
+CODE:
+{code}
+"""
+            }
+        ],
+        temperature=0.2
+    )
 
-def show_diff():
-    run("git diff")
+    return response["choices"][0]["message"]["content"]
 
-def commit_and_push(message):
+def patch_file():
+    file_path = input("Dosya yolu: ").strip()
+
+    if not os.path.exists(file_path):
+        print("Dosya bulunamadı")
+        return
+
+    with open(file_path, "r", encoding="utf-8") as f:
+        old_code = f.read()
+
+    prompt = input("AI prompt: ")
+
+    print("\nAI düşünüyor...\n")
+
+    new_code = ask_ai(prompt, old_code)
+
+    with open(file_path, "w", encoding="utf-8") as f:
+        f.write(new_code)
+
+    print("\nPatch uygulandı.\n")
+
+    run(f'git diff "{file_path}"')
+
+def commit_push():
+    msg = input("Commit mesajı: ")
+
     run("git add .")
-    run(f'git commit -m "{message}"')
+    run(f'git commit -m "{msg}"')
     run("git push")
 
 def main():
-    print("=== MetaTakip Agent ===")
-
     while True:
-        print("\nKomutlar:")
-        print("1 = git status")
+        print("\n=== MetaTakip AI Agent ===")
+        print("1 = AI patch uygula")
         print("2 = git diff")
         print("3 = commit + push")
         print("4 = çıkış")
@@ -44,14 +85,13 @@ def main():
         choice = input("\nSeçim: ").strip()
 
         if choice == "1":
-            show_status()
+            patch_file()
 
         elif choice == "2":
-            show_diff()
+            run("git diff")
 
         elif choice == "3":
-            msg = input("Commit mesajı: ")
-            commit_and_push(msg)
+            commit_push()
 
         elif choice == "4":
             break
