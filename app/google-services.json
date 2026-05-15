@@ -15,10 +15,10 @@
       "oauth_client": [
         {
           "client_id": "794416975212-gq675iq44bm3m511ttv47p43bpqa7ju9.apps.googleusercontent.com",
-          "client_type": 3,
+          "client_type": 1,
           "android_info": {
             "package_name": "com.example.metatakip",
-            "certificate_hash": "6C:56:22:6D:B6:4F:36:69:FF:6D:FF:01:18:D7:A7:C5:DD:61:E2:0C"
+            "certificate_hash": "6c56226db64f3669ff6dff0118d7a7c5dd61e20c"
           }
         }
       ],
