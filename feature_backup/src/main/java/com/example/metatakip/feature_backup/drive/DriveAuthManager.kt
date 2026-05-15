@@ -12,42 +12,47 @@ import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccoun
 import com.google.api.client.json.gson.GsonFactory
 import com.google.api.services.drive.Drive
 import com.google.api.services.drive.DriveScopes
-import java.util.Collections
 
 class DriveAuthManager(private val context: Context) {
 
     /**
      * 🔐 Google Sign-In istemcisini yapılandırır.
-     * DRIVE_FILE scope'u, uygulamanın sadece kendi oluşturduğu dosyalara erişmesini sağlar.
+     * Hibrit yedekleme sistemi için gerekli Drive izinleri burada tanımlanır.
      */
     fun getSignInClient(): GoogleSignInClient {
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestEmail()
-            // Hibrit yedekleme için sadece uygulama dosyalarına erişim (DRIVE_FILE) yeterli ve en güvenlisidir.
-            .requestScopes(Scope(DriveScopes.DRIVE_FILE))
+            .requestScopes(
+                Scope(DriveScopes.DRIVE_FILE),
+                Scope(DriveScopes.DRIVE_APPDATA)
+            )
             .build()
+
         return GoogleSignIn.getClient(context, gso)
     }
 
     /**
-     * Oturum açmış olan mevcut hesabı döndürür.
+     * Oturum açmış mevcut hesabı döndürür.
      */
     fun getLastSignedInAccount(): GoogleSignInAccount? {
         return GoogleSignIn.getLastSignedInAccount(context)
     }
 
     /**
-     * 🌍 Drive API servisini oluşturur.
-     * Senkronizasyon paketlerini (ZIP) Drive'a yüklemek için bu servis kullanılır.
+     * 🌍 Google Drive API servisini oluşturur.
      */
     fun getDriveService(): Drive {
         val account = getLastSignedInAccount()
-            ?: throw IllegalStateException("Google hesabı bağlı değil. Lütfen önce oturum açın.")
+            ?: throw IllegalStateException(
+                "Google hesabı bağlı değil. Lütfen önce oturum açın."
+            )
 
-        // Google hesabı üzerinden yetkilendirme (Credential) oluşturma
         val credential = GoogleAccountCredential.usingOAuth2(
             context,
-            Collections.singleton(DriveScopes.DRIVE_FILE)
+            listOf(
+                DriveScopes.DRIVE_FILE,
+                DriveScopes.DRIVE_APPDATA
+            )
         ).apply {
             selectedAccount = account.account
         }
@@ -57,13 +62,12 @@ class DriveAuthManager(private val context: Context) {
             GsonFactory.getDefaultInstance(),
             credential
         )
-            .setApplicationName("MetaTakip") // Drive işlemlerinde uygulamanın adını belirtir
+            .setApplicationName("MetaTakip")
             .build()
     }
 
     /**
      * 🚪 Oturumu kapatır.
-     * Farklı bir cihazda farklı bir kullanıcıyla test yaparken hayati önem taşır.
      */
     fun signOut(activity: Activity, onDone: (() -> Unit)? = null) {
         try {
@@ -76,15 +80,14 @@ class DriveAuthManager(private val context: Context) {
     }
 
     /**
-     * 🔍 Ekstra Kontrol: Hesabın hala geçerli olup olmadığını doğrular.
+     * 🔍 Kullanıcı giriş yapmış mı kontrol eder.
      */
     fun isUserSignedIn(): Boolean {
         return getLastSignedInAccount() != null
     }
 
     /**
-     * 👤 Kullanıcı E-posta Bilgisini Al:
-     * Senkronizasyon loglarında "Hangi hesapla yedek alındı?" bilgisini göstermek için kullanılır.
+     * 👤 Giriş yapan kullanıcının e-posta adresini döndürür.
      */
     fun getSignedInUserEmail(): String? {
         return getLastSignedInAccount()?.email
