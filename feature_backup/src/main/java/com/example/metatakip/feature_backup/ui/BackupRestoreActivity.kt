@@ -277,24 +277,61 @@ class BackupRestoreActivity : AppCompatActivity() {
     // NEDEN: Uygulama ilk açılışında Drive email henüz kayıtlı değilse groupId eksik üretilir
     // (örn: "metatakip_yedek01"). Email kaydedilince groupId değişir ama dinleyici güncellenmez.
     // Bu satır olmadan iki cihaz farklı Firestore yollarını izler — sinyal hiç alınamaz.
-    private val signInLauncher =
-        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
-            try {
-                val account = task.getResult(ApiException::class.java)
-                BackupPreferences.setDriveConnected(true)
-                BackupPreferences.setDriveEmail(account.email)
-                // 🔧 KRİTİK: Email kaydedildikten HEMEN SONRA dinleyiciyi yeni groupId ile yeniden başlat
-                FirebaseRealtimeBridgeManager.onDriveAccountChanged(this)
-                updateAccountInfo()
-                lifecycleScope.launch { refreshDevicePanels() }
-                log("✅ Drive bağlandı: ${account.email}")
-                toast("Drive bağlantısı başarılı")
-            } catch (e: Exception) {
-                log("❌ Drive bağlantı hatası: ${e.message}")
-                toast("Drive bağlantısı başarısız")
+private val signInLauncher =
+    registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+
+        log("🔐 Drive giriş sonucu alındı")
+        log("resultCode = ${result.resultCode}")
+
+        val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
+
+        try {
+            val account = task.getResult(ApiException::class.java)
+
+            BackupPreferences.setDriveConnected(true)
+            BackupPreferences.setDriveEmail(account.email)
+
+            FirebaseRealtimeBridgeManager.onDriveAccountChanged(this)
+
+            updateAccountInfo()
+            lifecycleScope.launch { refreshDevicePanels() }
+
+            log("✅ Drive bağlandı: ${account.email}")
+            toast("Drive bağlantısı başarılı")
+
+        } catch (e: Exception) {
+
+            BackupPreferences.setDriveConnected(false)
+            BackupPreferences.setDriveEmail(null)
+
+            if (e is ApiException) {
+                log("❌ Google ApiException")
+                log("statusCode = ${e.statusCode}")
+                log("status = ${e.status}")
+                log("message = ${e.message}")
+
+                android.util.Log.e(
+                    "GOOGLE_SIGNIN",
+                    "ApiException code=${e.statusCode}",
+                    e
+                )
+            } else {
+                log("❌ Genel Exception")
+                log("message = ${e.message}")
+
+                android.util.Log.e(
+                    "GOOGLE_SIGNIN",
+                    "General Exception",
+                    e
+                )
             }
+
+            updateAccountInfo()
+            lifecycleScope.launch { refreshDevicePanels() }
+
+            toast("Drive bağlantısı başarısız")
         }
+    }
 
     // ==================== LIFECYCLE ====================
 
